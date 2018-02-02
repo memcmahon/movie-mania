@@ -8,8 +8,8 @@ describe "user sees the movie edit page" do
       visit '/movies/1/edit'
 
       expect(page).to have_content("Edit Movie Info:")
-      expect(page).to have_field("movie[title]")
-      expect(page).to have_field("movie[description]")
+      expect(page).to have_field("movie[title]", :with => "Alice")
+      expect(page).to have_field("movie[description]", :with => "acid day dream")
       expect(page).to have_selector("input[type=submit]")
     end
   end
