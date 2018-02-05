@@ -6,7 +6,7 @@ describe "user sees the movie info page" do
       director = Director.create!(name: "Steven Spielberg")
       movie_1 = Movie.create!(id: 1, title: "Alice", description: "acid day dream", director: director)
 
-      visit "/movies/#{movie_1.id}"
+      visit movie_path(movie_1)
 
       expect(page).to have_content("Movie Info")
       expect(page).to have_content("Alice")
