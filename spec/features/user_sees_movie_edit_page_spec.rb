@@ -3,7 +3,8 @@ require 'rails_helper'
 describe "user sees the movie edit page" do
   describe "they visit movies/id/edit" do
     it "shows edit movie form" do
-      movie_1 = Movie.create!(id: 1, title: "Alice", description: "acid day dream")
+      director = Director.create!(name: "Steven Spielberg")
+      movie_1 = Movie.create!(id: 1, title: "Alice", description: "acid day dream", director: director)
 
       visit '/movies/1/edit'
 

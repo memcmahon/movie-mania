@@ -3,8 +3,9 @@ require "rails_helper"
 describe "user sees all movies" do
   describe "they visit movie index" do
     it "sees all the movies" do
-      fred = Movie.create!(title: "Drop Dead Fred", description: "An unhappy housewife gets lifted from deserted island")
-      empire = Movie.create!(title: "Empire Records", description: "Indy Delaware record store")
+      director = Director.create!(name: "Steven Spielberg")
+      fred = Movie.create!(title: "Drop Dead Fred", description: "An unhappy housewife gets lifted from deserted island", director: director)
+      empire = Movie.create!(title: "Empire Records", description: "Indy Delaware record store", director: director)
 
       visit "/movies"
 
