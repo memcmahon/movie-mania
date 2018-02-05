@@ -1,7 +1,9 @@
 <h1>Enter Movie Info:</h1>
 
-<form class="" action="index.html" method="post">
-  <input type="text" name="movie[title]" value="Title">
-  <input type="text" name="movie[description]" value="Description">
-  <input type="submit" name="submit">
-</form>
+<%= form_for [@director, @movie] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
