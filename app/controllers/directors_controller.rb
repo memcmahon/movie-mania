@@ -16,7 +16,6 @@ class DirectorsController < ApplicationController
     end
   end
 
-
   private
 
   def director_params
