@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe "user creates new movie" do
   it "fills in relevant information" do
-    director = Director.create!(name: "Megan")
-
+    director = create(:director)
     visit new_director_movie_path(director)
 
     fill_in "movie[title]", with: "Finding Nemo"
@@ -12,6 +11,6 @@ describe "user creates new movie" do
 
     expect(page).to have_content("Finding Nemo")
     expect(page).to have_content("A sad fish story")
-    expect(page).to have_content("Megan")
+    expect(page).to have_content(director.name)
   end
 end

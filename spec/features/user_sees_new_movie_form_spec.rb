@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "user sees new movie form" do
   describe "they visit movies/new" do
     it "shows new movie form" do
-      director = Director.create!(name: "Megan")
+      director = create(:director)
 
       visit new_director_movie_path(director)
 
