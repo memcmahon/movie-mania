@@ -8,4 +8,8 @@ FactoryBot.define do
     description "Maybe brad pitt is in it"
     director
   end
+
+  factory :admin, class: Director do
+    name "Megan"
+  end
 end
